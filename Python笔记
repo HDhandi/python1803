@@ -39,6 +39,9 @@ can't multiply sequence by non-int of type 'str'
 在python2中 input()函数 如果要输入字符串要加一个引号
 
 
+break  跳出循环－－－－循环结束　　　　意思结束
+continue 跳过当次　－－－－接着执行下一次　　意思继续
+　
 作业：
 笔记20章所有练习题 在VI 别忘提交
 还有一些人罚单词  20遍
