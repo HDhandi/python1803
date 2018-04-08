@@ -40,5 +40,14 @@ IndentationError: expected an indented block
 suoyijicuowu
 
 
+TypeError                                 Traceback (most recent call last)
+<ipython-input-3-18458ba600d2> in <module>()
+----> 1 person.insert("laosong")
+
+TypeError: insert() takes exactly 2 arguments (1 given)
+
+这个方法两个参数，你给我了一个
+
+
 
 
