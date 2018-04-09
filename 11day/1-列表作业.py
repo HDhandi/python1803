@@ -8,6 +8,8 @@ print("%s不能来了"%persons[0])
 
 
 
+list = [4,5,6,7]
+
 persons[0]= "laoliu"
 
 for i  in persons:
