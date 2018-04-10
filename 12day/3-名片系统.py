@@ -1,3 +1,4 @@
+#输出菜单
 print("名片系统v1.0版本".center(30,"*"))
 print("1:新增名片".center(30," "))
 print("2:查找名片".center(30," "))
@@ -17,7 +18,7 @@ while True:
 				break
 			#[{1},{2},{3}]
 		
-		if flag == 1:
+		if flag == 1:#重复了直接结束当次循环，继续下次循环
 			print("名字重复了")
 			continue
 		job = input("请输入职位")
@@ -25,7 +26,7 @@ while True:
 		company = input("请输入公司名字")
 		address = input("请输入公司地址")
 		#list = [{},{},{}]	
-		#if flag == 0:
+		#if flag == 0:#走到这里flag一定等于0
 		card["name"] = name
 		card["job"]  = job
 		card["phone"] = phone
