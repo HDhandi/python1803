@@ -4,6 +4,7 @@ print("1:新增名片".center(30," "))
 print("2:查找名片".center(30," "))
 print("3:修改名片".center(30," "))
 print("4:删除名片".center(30," "))
+print("5:退出系统".center(30," "))
 cards = []#定义空列表
 while True:
 	fun_number = int(input("请选择功能"))
@@ -51,4 +52,18 @@ while True:
 	elif fun_number == 3:
 		print("修改")
 	elif fun_number == 4:
-		print("删除")
+		name = input("请输入你要删除的名字")
+		flag = 0 #假设不在
+		for temp in cards:
+			if name == temp["name"]:
+				flag = 1#找到了
+				sure_num = int(input("0确认删除　1返回"))
+				if sure_num == 0:
+					cards.remove(temp)#删除
+					print("删除成功")
+				break
+		
+		if flag == 0:
+			print("没有此人")	
+	else:
+		break	
