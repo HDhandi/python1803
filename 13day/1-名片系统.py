@@ -68,6 +68,7 @@ while True:
 			count+=1 #记录找的次数
 			if name == temp["name"]:
 				flag = 1
+				#print("姓名:%s\n职位:%s\n手机号:%s\n公司:%s\n地址:%s\n"%(temp["name"],temp["job"],temp["phone"],temp["company"],temp["address"]))
 				break
 			
 		if flag == 0:
@@ -78,11 +79,11 @@ while True:
 		name  = input("你输入要修改的名字")	
 		for temp in cards:
 			if name == temp["name"]:
-				print("1:修改名字".center(30,"*"))
-				print("2:修改职位".center(30,"*"))
-				print("3:修改手机号".center(30,"*"))
-				print("4:修改公司名称".center(30,"*"))
-				print("5:修改公司地址".center(30,"*"))
+				print("1:修改名字".center(30," "))
+				print("2:修改职位".center(30," "))
+				print("3:修改手机号".center(30," "))
+				print("4:修改公司名称".center(30," "))
+				print("5:修改公司地址".center(30," "))
 				change_num = int(input("请选择修改序号"))
 				if change_num == 1:
 					name = input("请输入新的名字")
