@@ -1,0 +1,15 @@
+def show_info(hero):
+	age = hero+"年龄是500岁"
+	tool = hero+"武器是金箍棒"
+	wife = hero+"的老婆是紫霞"
+	return age,tool,wife	
+
+	
+
+
+
+a,b,c=show_info("孙悟空")
+print(a+"长生不老")
+print(b+"伸缩自如")
+print(c+"小三是白骨精")
+	
