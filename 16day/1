@@ -1,0 +1,15 @@
+import time
+def play_game():
+	for i in range(10):
+		print("玩吃鸡 哒哒哒哒")
+		time.sleep(1)
+	print("你爸爸来了")
+	kill()
+	
+
+def kill():
+	print("一顿削")
+
+
+
+play_game()
