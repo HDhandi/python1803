@@ -1,0 +1,250 @@
+Linux命令
+
+cd  切换目录 cd ..  cd -  cd ~
+pwd 查看工作路径
+ls  查看目录列表   ls -a  ls -h  ll
+cat 查看文件内容
+more 查看
+> 重定向   >> 内容追加也是重定向
+| 管道
+mv  移动或改名
+cp  用来复制
+rm 	删除文件    
+rm -r 删除文件夹
+rmdir 删除空文件夹
+touch 创建文件
+mkdir 创建文件夹
+gedit 编辑文件
+find  搜索目录文件 find -name  find -size
+grep  搜索文件内容的
+ln -s 软连接
+ln    硬连接
+tar  -zcvf    xxx.tar.gz 归档并压缩
+tar  -zxvf    xxx.tar.gz 解压缩
+chmod 777 xxx.py  权限修改
+ping  查看本地网络是否通畅
+ifconfig 查看ip地址
+clear 清屏
+ps -aux 查看进程
+kill -9 强制杀死进程
+ssh python@ip   远程登录
+scp -r xxx   远程拷贝文件
+^x 以x开头
+x$ 以结尾
+
+x* 以x开头的所有文件
+*x 以x结尾的所有文件
+
+vi 编辑器
+
+sudo apt install xxx 安装
+sudo apt remove xxx	 卸载
+
+init0 关机
+shutdown -h now
+
+init6 重启
+reboot
+-------------------------------------------
+git命令
+git add .  添加文件
+git commit -m "desc" 提交文件
+git push origin master  提交到远程仓库
+
+git clone xxxx clone到本地
+git pull   刷新代码
+
+-------------------------------------------
+python
+解释型语言
+历史
+解释器用c语言写的
+python2和python3 语法差不多，一些函数不太一样
+python3将是主流
+
+变量
+int   整数
+float 浮点数
+bool   布尔 True和False
+str   字符串
+
+type() 查看变量类型
+int a = 3
+float(a)  类型转换 
+
+if 条件：
+	逻辑
+elif 条件：
+	逻辑
+else:			
+	逻辑	
+if嵌套
+
+and 和或且
+or  或
+not 不
+
+while 条件：
+	循环体
+
+while 嵌套 ----- 乘法口诀	
+
+break 跳出循环 
+continue 跳过当次循环
+
+for i in xxx:
+	逻辑
+for 嵌套 开发过程中2层  3层很少见 -- 乘法口诀
+
+for i in range(起始值，终止值，步长)：有头没尾
+	逻辑 
+
+import random
+random.randint(1,1) 有头有尾
+
+字符串
+startswith() 以什么开头
+endswith() 以什么结尾
+find() 返回索引
+index() 返回索引
+str[起始值:终止值:步长]  切片 有头没尾
+
+列表 有序
+list = []
+增：
+append(value) 
+insert(position,value)
+extend(value) 
+
+append()和extend()区别 
+append() 可以把数据当做一个元素塞到末尾
+extend() 把数据分解分别放到列表末尾
+
+删：
+pop() 默认最后一个
+pop(position)  删除指定索引对应的值
+remove(value)  删除指定的值
+del list[postion] 删除指定索引对应的值
+clear() 清空
+
+改
+list[postion] = value 
+
+查
+list[position] 
+
+排序
+sort() 升序
+sort(reverse=True) 降序
+reverse()  倒序
+
+元组 有序
+tuple = ()
+一旦定义 不可更改
+
+字典 无序
+dictionary = {}
+
+增：
+dict[key] = value
+setdefault(key,value) 如果key存在 值不会改变
+不存在，则新建
+dict.update(dict2) 合并
+
+删：
+dict.popitems() 随机删除键值对
+dict.pop(key) 删除指定的键值对
+dict.clear() 清空
+
+改
+dict.get(key) = value  
+
+查
+dict[key]  key不存在 报错
+dict.get(key)  key不存在 不报错
+
+max() 最大值
+min() 最小值
+len() 长度
+sum() 求和
+averge() 平均数
+
+函数
+
+def xxx(): 无参数无返回值
+	pass
+
+def xxx(): 无参数有返回值
+	return xxx 
+
+def xxx(args): 有参数无返回值
+	pass 		 
+
+def xxx(args): 有参数有返回值
+	return xxx 
+
+
+缺省参数  缺省参数一定要放到参数后面
+def xxx(a,b=2):
+	pass
+
+不定长参数 
+def xxx(a,b,c=2,*args,**kwargs):
+	pass
+
+t = (3,4,5)
+d = {"age":12}
+xxx(1,2,3,*t,**d)
+
+匿名函数
+
+lambda x,y:x+y
+fun=lambda arg1,arg2:式子
+fun(1,2)调用
+
+递归函数 注意：什么时候结束
+阶乘 5！= 5*4*3*2*1
+def xxx(num):
+	if num == 1:
+		retunr 1
+	else:
+		return num*xxx(num-1)
+
+
+冒泡排序：前后两个数字相比较 进行交换
+二分法：从中间开始分，来找要找的数字
+进制：二进制转十进制 十进制转二进制
+
+in  判断什么里面
+not in 判断不在里面
+
+d = {} 转成bool的值是False
+l= []  转成bool的值是False
+t = () 转成bool的值是False
+int = 0 转成bool的值是False
+str = “” 转成bool的值是False
+
+% 取余
+** 幂
+%d 整数占位符
+%s 字符串占位符
+%f 浮点数占位符  保留两位小数 %.02f
+
+制表符
+\n  换行
+\t  空格
+print("xxx",end="") 不换行
+
+注释：
+# 单行注释
+
+多行注释
+'''
+'''
+引用
+id() 可以查看引用
+
+
+
+ 
+
